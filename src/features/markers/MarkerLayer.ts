@@ -84,8 +84,10 @@ export class MarkerLayer {
   destroy(): void {
     this.handler.destroy();
     this.unsubscribe?.();
-    for (const entity of this.entities.values()) {
-      this.viewer.entities.remove(entity);
+    if (!this.viewer.isDestroyed()) {
+      for (const entity of this.entities.values()) {
+        this.viewer.entities.remove(entity);
+      }
     }
     this.entities.clear();
   }
