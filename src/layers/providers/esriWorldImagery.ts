@@ -18,7 +18,7 @@ export const esriWorldImageryFactory: ProviderFactory = {
   create() {
     return new UrlTemplateImageryProvider({
       url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
-      maximumLevel: 19,
+      maximumLevel: 18,
       credit: 'Esri, Maxar, Earthstar Geographics, and the GIS User Community',
     });
   },
