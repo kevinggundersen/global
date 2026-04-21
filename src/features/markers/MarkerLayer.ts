@@ -6,7 +6,6 @@ import {
   ScreenSpaceEventType,
   type Viewer,
   VerticalOrigin,
-  HeightReference,
 } from 'cesium';
 import { MarkerStore, type Marker } from './MarkerStore';
 
@@ -58,7 +57,6 @@ export class MarkerLayer {
             color: Color.fromCssColorString('#ff5252'),
             outlineColor: Color.WHITE,
             outlineWidth: 2,
-            heightReference: HeightReference.CLAMP_TO_GROUND,
           },
           label: {
             text: m.name,
